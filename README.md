@@ -10,7 +10,9 @@
 
 ## What's this?
 
-This is a template for a web app that uses Kernel.
+This template is a chatbot that controls a Kernel Browser. The chatbot is hosted on Vercel and the agent and browser is hosted on Kernel.
+
+![kernel-vercel-template](https://github.com/user-attachments/assets/c7b212a6-8872-4c82-8f1d-92c9021eb393)
 
 ## What's Kernel?
 
