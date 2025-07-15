@@ -12,7 +12,9 @@
 
 This template is a chatbot that controls a Kernel Browser. The chatbot is hosted on Vercel and the agent and browser is hosted on Kernel.
 
-![kernel-vercel-template](https://github.com/user-attachments/assets/c7b212a6-8872-4c82-8f1d-92c9021eb393)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c7b212a6-8872-4c82-8f1d-92c9021eb393" alt="kernel-vercel-template">
+</p>
 
 ## What's Kernel?
 
