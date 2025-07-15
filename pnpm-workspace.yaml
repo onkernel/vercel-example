@@ -4,5 +4,5 @@ onlyBuiltDependencies:
   - unrs-resolver
 
 packages:
-  - 'kernel/**'
-  - 'app/**'
+  - 'packages/web/**'
+  - 'packages/agent/**'
