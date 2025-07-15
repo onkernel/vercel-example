@@ -18,7 +18,7 @@ This template is a chatbot that controls a Kernel Browser. The chatbot is hosted
 
 ## What's Kernel?
 
-Kernel provides sandboxed, ready-to-use Chrome browsers for browser automations and web agents. This repo powers our [hosted services](https://docs.onkernel.com/introduction).
+Kernel provides sandboxed, ready-to-use Chrome browsers for browser automations and web agents.
 
 Sign up [here](https://www.onkernel.com/)!
 
