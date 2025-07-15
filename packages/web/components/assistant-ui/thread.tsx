@@ -16,11 +16,11 @@ import {
   RefreshCwIcon,
   SendHorizontalIcon,
 } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { cn } from "@/packages/web/lib/utils";
 
-import { Button } from "@/components/ui/button";
-import { MarkdownText } from "@/components/assistant-ui/markdown-text";
-import { TooltipIconButton } from "@/components/assistant-ui/tooltip-icon-button";
+import { Button } from "@/packages/web/components/ui/button";
+import { MarkdownText } from "@/packages/web/components/assistant-ui/markdown-text";
+import { TooltipIconButton } from "@/packages/web/components/assistant-ui/tooltip-icon-button";
 import { ToolFallback } from "./tool-fallback";
 
 export const Thread: FC = () => {

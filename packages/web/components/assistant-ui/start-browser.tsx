@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@/packages/web/components/ui/button";
 
 export const StartBrowser = () => {
   const handleStartBrowser = () => {
