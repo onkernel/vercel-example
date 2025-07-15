@@ -3,12 +3,11 @@
 import { Kernel } from "@onkernel/sdk";
 
 const kernel = new Kernel({
-  apiKey: process.env.ONKERNEL_API_KEY,
+  apiKey: process.env.KERNEL_API_KEY,
 });
 
 const getPersistentBrowserFromPersistenceId = async (browserId: string) => {
   const browsers = await kernel.browsers.list();
-  console.log("Browsers", browsers);
   const persistentBrowser = browsers?.find(
     (browser) => browser.persistence?.id === browserId
   );

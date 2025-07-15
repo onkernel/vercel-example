@@ -2,10 +2,10 @@
 
 import { AssistantRuntimeProvider } from "@assistant-ui/react";
 import { useChatRuntime } from "@assistant-ui/react-ai-sdk";
-import { Thread } from "@/packages/web/components/assistant-ui/thread";
-import { TvFrame } from "@/packages/web/components/ui/tv-frame";
-import { BrowserSleeping } from "@/packages/web/components/assistant-ui/browser-asleep";
-import { Button } from "@/packages/web/components/ui/button";
+import { Thread } from "@/components/assistant-ui/thread";
+import { TvFrame } from "@/components/ui/tv-frame";
+import { BrowserSleeping } from "@/components/assistant-ui/browser-asleep";
+import { Button } from "@/components/ui/button";
 import React, { useState, useTransition, useEffect } from "react";
 import { getBrowser, resetBrowser } from "./actions";
 
