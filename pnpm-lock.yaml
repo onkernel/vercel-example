@@ -10,6 +10,9 @@ importers:
 
   packages/agent:
     dependencies:
+      '@onkernel/sdk':
+        specifier: ^0.7.1
+        version: 0.7.1
       playwright:
         specifier: ^1.54.0
         version: 1.54.1

@@ -13,6 +13,7 @@
   "packageManager": "pnpm@10.12.4",
   "dependencies": {
     "playwright": "^1.54.0",
+    "@onkernel/sdk": "^0.7.1",
     "zod": "^4.0.2"
   }
 }
