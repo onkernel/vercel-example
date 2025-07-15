@@ -12,8 +12,9 @@
   "license": "ISC",
   "packageManager": "pnpm@10.12.4",
   "dependencies": {
-    "playwright": "^1.54.0",
+    "@onkernel/cu-playwright": "^0.1.2",
     "@onkernel/sdk": "^0.7.1",
+    "playwright": "^1.54.0",
     "zod": "^4.0.2"
   }
 }

@@ -21,10 +21,6 @@ const getPersistentBrowserFromPersistenceId = async (browserId: string) => {
 
     return browser.browser_live_view_url;
   }
-  console.log(
-    "Found browser",
-    persistentBrowser.replay_view_url || persistentBrowser.browser_live_view_url
-  );
 
   return persistentBrowser.browser_live_view_url;
 };

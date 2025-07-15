@@ -28,9 +28,6 @@ export const Assistant = () => {
 
   const runtime = useChatRuntime({
     api: "/api/chat",
-    onResponse(response) {
-      console.log(response);
-    },
   });
 
   const handleToggle = () => {

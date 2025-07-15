@@ -99,13 +99,12 @@ const ThreadWelcomeSuggestions: FC = () => {
       </ThreadPrimitive.Suggestion>
       <ThreadPrimitive.Suggestion
         className="hover:bg-white/10 flex max-w-sm grow basis-0 flex-col items-center justify-center rounded-lg border border-white/20 p-3 transition-colors ease-in"
-        prompt="Find the quick start guide for OnKernel.com."
+        prompt="Go to docs.onkernel.com and tell me how to get started."
         method="replace"
         autoSend
       >
         <span className="line-clamp-2 text-ellipsis text-sm font-semibold text-white">
-          Find the quick start guide for OnKernel.com and tell me how to get
-          started.
+          Tell me how to get started with Kernel.
         </span>
       </ThreadPrimitive.Suggestion>
     </div>
