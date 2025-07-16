@@ -5,7 +5,9 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "logs": "kernel logs browser-tool -f",
+    "kernel:deploy": "kernel deploy index.ts"
   },
   "keywords": [],
   "author": "",

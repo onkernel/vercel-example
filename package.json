@@ -4,9 +4,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start",
+    "dev:web": "cd packages/web && pnpm dev",
+    "deploy:agent": "cd packages/agent && pnpm kernel:deploy",
+    "start:web": "cd packages/web && next start",
     "lint": "next lint"
   }
 }
