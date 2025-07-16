@@ -71,7 +71,7 @@ Kernel provides sandboxed, ready-to-use Chrome browsers for browser automations 
 
 We also provide a remote GUI access (live view streaming) for visual monitoring and remote control.
 
-## What You Can Do With Our Platform
+### What You Can Do With Our Platform
 
 - Run automated browser-based workflows
 - Develop and test AI agents that use browsers
