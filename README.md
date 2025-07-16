@@ -16,6 +16,10 @@ This template is a chatbot that controls a Kernel Browser. The chatbot is hosted
   <img src="https://github.com/user-attachments/assets/c7b212a6-8872-4c82-8f1d-92c9021eb393" alt="kernel-vercel-template">
 </p>
 
+The general chat agent is powered by AI SDK and Assistant UI. We provide it a few tools that allow it to control a web browser hosted on kernel. You can extend the chat bot with more tools by reading these [docs](https://ai-sdk.dev/docs/ai-sdk-core/tools-and-tool-calling). 
+
+Because this project is powered by AI SDK you can also turn this chatbot into a MCP client by following these [docs](https://ai-sdk.dev/cookbook/node/mcp-tools).
+
 ## What's Kernel?
 
 Kernel provides sandboxed, ready-to-use Chrome browsers for browser automations and web agents.
