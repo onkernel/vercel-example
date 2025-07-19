@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "logs": "kernel logs browser-tool -f",
-    "kernel:deploy": "kernel deploy index.ts"
+    "kernel:deploy": "kernel deploy index.ts --env-file .env"
   },
   "keywords": [],
   "author": "",
