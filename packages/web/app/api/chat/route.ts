@@ -57,7 +57,7 @@ const browserAgentTool = tool({
       action_name: "browserAgentTool",
       app_name: "browser-tool",
       version: "latest",
-      async: false,
+      async: true,
       payload: JSON.stringify({
         query,
         browserInfo: {
@@ -66,7 +66,30 @@ const browserAgentTool = tool({
       }),
     });
 
-    return result.output;
+    // Poll for completion
+    const invocation_id = result.id;
+    let status = "queued";
+    
+    while (status=== "running" || status=== "queued") {
+      await new Promise(resolve => setTimeout(resolve, 1000)); // Wait 1 second between polls
+      
+      const response = await kernel.invocations.retrieve(invocation_id);
+       
+      const {
+        status_reason,
+        output,
+        status: currentStatus,
+      } = response;
+      
+      status = currentStatus.toLowerCase();
+       
+      if (status === "succeeded") {
+        return output;
+      } else if (status === "failed") {
+        throw new Error(`Invocation failed: ${status_reason}`);
+      }
+    }
+    throw new Error(`Unexpected status: ${status}`);
   },
 });
 
@@ -76,7 +99,7 @@ export async function POST(req: Request) {
   const today = new Date().toISOString().split("T")[0];
   const result = streamText({
     model: anthropic("claude-4-sonnet-20250514"),
-    system: `Today is ${today}. You are an autonomous web-browsing agent. You MUST rely on the tools provided to you to perform actions on the web to answer the user's question. Answer the user's question based on the information you find on the web and summarize your findings.`,
+    system: `Today is ${today}. You are an autonomous web-browsing agent. You MUST rely on the tools provided to you to perform actions on the web to answer the user's question. Answer the user's question based on the information you find on the web and summarize your findings. IF YOU ENCOUNTER A CAPTCHA, JUST WAIT UNTIL IT DISAPPEARS! THE BROWSER WILL AUTOMATICALLY SOLVE IT. USE DUCKDUCKGO.COM NOT GOOGLE.COM`,
     messages: messages,
     // forward system prompt and tools from the frontend
     // toolCallStreaming: true,

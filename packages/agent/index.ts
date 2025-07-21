@@ -100,7 +100,7 @@ app.action<unknown, unknown>(
     const browser = await chromium.connectOverCDP(persistentBrowser.cdp_ws_url);
     const page = await getDefaultPage(browser);
 
-    await page.goto(`https://www.google.com/search?q=${query}`);
+    await page.goto(`https://www.duckduckgo.com/search?q=${query}`);
   }
 );
 

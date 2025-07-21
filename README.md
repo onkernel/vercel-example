@@ -62,6 +62,8 @@ You can deploy the web app on Vercel. Make sure you've also deployed the AI web 
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fonkernel%2Fvercel-template%2Ftree%2Fmain%2Fpackages%2Fweb&env=KERNEL_API_KEY&env=ANTHROPIC_API_KEY&envDescription=API%20keys%20needed%20for%20the%20application.&envLink=https%3A%2F%2Fdashboard.onkernel.com%2Fsign-up&project-name=web-agent-app)
 
+Vercel Functions have [limits](https://vercel.com/docs/functions/configuring-functions/duration) on how long they can run. Configure the app's [here](https://github.com/onkernel/vercel-template/blob/56656ccd6f6d5de084f29974d03ea4f88c35cf84/packages/web/app/api/chat/route.ts#L11). Long-running tasks may time out depending on your Vercel settings.
+
 ## Project Layout
 
 ```bash
