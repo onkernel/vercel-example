@@ -3,14 +3,14 @@
 </p>
 
 <p align="center">
-  <img alt="GitHub License" src="https://img.shields.io/github/license/onkernel/kernel-images">
+  <img alt="GitHub License" src="https://img.shields.io/github/license/onkernel/vercel-template">
   <a href="https://discord.gg/FBrveQRcud"><img src="https://img.shields.io/discord/1342243238748225556?logo=discord&logoColor=white&color=7289DA" alt="Discord"></a>
   <a href="https://x.com/onkernel"><img src="https://img.shields.io/twitter/follow/onkernel" alt="Follow @onkernel"></a>
 </p>
 
 # Kernel Vercel Template
 
-A web agent chatbot template build with Next.js, Vercel, and Kernel.
+A chatbot template with browser automation capabilities. Uses [Next.js](https://nextjs.org/), [Vercel AI SDK](https://ai-sdk.dev), [Assistant-UI](https://github.com/assistant-ui/assistant-ui), and [Kernel](https://www.onkernel.com).
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/c7b212a6-8872-4c82-8f1d-92c9021eb393" alt="kernel-vercel-template">
@@ -18,27 +18,37 @@ A web agent chatbot template build with Next.js, Vercel, and Kernel.
 
 ## Getting Started
 
-Sign up for a Kernel account [here](https://dashboard.onkernel.com) or integrate with Vercel ( coming soon )
+1. Sign up for a [Kernel account](https://dashboard.onkernel.com/sign-up) and create an API key.
 
+2. Clone the repository:
 ```bash
 git clone https://github.com/onkernel/vercel-template.git
 cd vercel-template
 ```
 
-Add your Kernel API key and Anthropic API key to the `.env` file in the `packages/agent` and `packages/web` directories.
+3. Download the Kernel CLI:
+```bash
+brew install onkernel/tap/kernel
+```
+
+4. Add your Kernel API key and Anthropic API key to the `.env` file in the `packages/agent` and `packages/web` directories.
 
 ```bash
+cd packages/agent && cp .env.example .env
+cd ../web && cp .env.example .env
+
+# In .env
 KERNEL_API_KEY=your-api-key
 ANTHROPIC_API_KEY=your-api-key
 ```
 
-Deploy the agent to Kernel
+5. Deploy the agent to Kernel:
 
 ```bash
 pnpm run deploy:agent
 ```
 
-Run the development server for the web app
+6. Run the development server for the web app:
 
 ```bash
 pnpm run dev:web
@@ -46,13 +56,19 @@ pnpm run dev:web
 
 You can now access the web app at `http://localhost:3000`
 
+## Deploying to Vercel
+
+You can deploy the web app on Vercel. Make sure you've also deployed the AI web agent on Kernel as described in the Getting Started section.
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fonkernel%2Fvercel-template%2Ftree%2Fmain%2Fpackages%2Fweb&env=KERNEL_API_KEY&env=ANTHROPIC_API_KEY&envDescription=API%20keys%20needed%20for%20the%20application.&envLink=https%3A%2F%2Fdashboard.onkernel.com%2Fsign-up&project-name=web-agent-app)
+
 ## Project Layout
 
 ```bash
 kernel-vercel-template/
 ├── packages/
-│   ├── agent/ # Kernel agent
-│   ├── web/ # Web app
+│   ├── agent/ # Kernel browser agent
+│   ├── web/ # Next.js web app
 ```
 
 ### `packages/agent`
@@ -63,15 +79,13 @@ You can tail the logs of the action by running `pnpm run logs` in the `packages/
 
 ### `packages/web`
 
-The web app is responsible for the UI. It uses [Next.js](https://nextjs.org/), [AI SDK](https://ai-sdk.dev), and [Assistant-UI](https://github.com/assistant-ui/assistant-ui) to build the chat interface. The chatbot is deployed as a [route](packages/web/app/api/chat/route.ts) in the web app and uses the `browserAgentTool` to control the browser. You can extend this to build a custom chatbot with your own tools.
+The web app is responsible for the UI. It uses [Next.js](https://nextjs.org/), Vercel [AI SDK](https://ai-sdk.dev), and [Assistant-UI](https://github.com/assistant-ui/assistant-ui) to build the chat interface. The chatbot is deployed as a [route](packages/web/app/api/chat/route.ts) in the web app and uses the `browserAgentTool` to control the browser. You can extend this to build a custom chatbot with your own tools.
 
 ## What's Kernel?
 
-Kernel provides sandboxed, ready-to-use Chrome browsers for browser automations and web agents. You can connect to the browser using Chrome DevTools-based browser frameworks (Playwright, Puppeteer).
+Kernel provides hosted browsers on-demand for browser automations and web agents. You can connect to the browser using Chrome DevTools-based browser frameworks (Playwright, Puppeteer).
 
-We also provide a remote GUI access (live view streaming) for visual monitoring and remote control.
-
-### What You Can Do With Our Platform
+### What You Can Do With Kernel
 
 - Run automated browser-based workflows
 - Develop and test AI agents that use browsers
@@ -79,10 +93,14 @@ We also provide a remote GUI access (live view streaming) for visual monitoring 
 
 ## Support
 
-For issues, questions, or feedback, please [open an issue](https://github.com/onkernel/kernel-images/issues) on this repository. You can also join our [Discord](https://discord.gg/FBrveQRcud).
+For issues, questions, or feedback, please [open an issue](https://github.com/onkernel/vercel-template/issues) on this repository. You can also join our [Discord](https://discord.gg/FBrveQRcud).
 
 ## License
 
 See the [LICENSE](./LICENSE) file for details.
+
+## Colophon
+
+The background wallpaper was generated by AI.
 
 Made with ❤️ by the [Kernel team](https://www.onkernel.com).
