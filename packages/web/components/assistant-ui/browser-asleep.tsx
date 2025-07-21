@@ -33,7 +33,7 @@ export const BrowserSleeping = ({
     if (thread.isRunning) {
       setIsOn(true);
     }
-  }, [thread.isRunning]);
+  }, [thread.isRunning, setIsOn]);
 
   return (
     <div className="flex flex-col items-center justify-center h-full w-full bg-[#261A47]/75">

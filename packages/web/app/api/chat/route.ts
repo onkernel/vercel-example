@@ -6,10 +6,9 @@ import { anthropic } from "@ai-sdk/anthropic";
 
 const kernel = new Kernel({
   apiKey: process.env.KERNEL_API_KEY,
-  baseURL: process.env.KERNEL_BASE_URL,
 });
 
-export const maxDuration = 60 * 10;
+export const maxDuration = 600;
 
 const browser_persistent_id = "kernel-example-id";
 
@@ -72,7 +71,7 @@ const browserAgentTool = tool({
 });
 
 export async function POST(req: Request) {
-  const { messages, system, tools } = await req.json();
+  const { messages, tools } = await req.json();
 
   const today = new Date().toISOString().split("T")[0];
   const result = streamText({
