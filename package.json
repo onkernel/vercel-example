@@ -2,11 +2,12 @@
   "name": "Kernel-Vercel-Template",
   "packageManager": "pnpm@10.12.4",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev:web": "cd packages/web && pnpm dev",
-    "deploy:agent": "cd packages/agent && pnpm kernel:deploy",
-    "start:web": "cd packages/web && next start",
-    "lint": "next lint"
+    "deploy:agent": "cd packages/agent && pnpm kernel:deploy"
+  },
+  "dependencies": {
+    "next": "^15.4.2"
   }
 }
