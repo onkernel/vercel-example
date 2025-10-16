@@ -8,7 +8,7 @@
   <a href="https://x.com/onkernel"><img src="https://img.shields.io/twitter/follow/onkernel" alt="Follow @onkernel"></a>
 </p>
 
-# Kernel Vercel Template
+# Kernel Vercel Example
 
 A chatbot template with browser automation capabilities. Uses [Next.js](https://nextjs.org/), [Vercel AI SDK](https://ai-sdk.dev), [Assistant-UI](https://github.com/assistant-ui/assistant-ui), and [Kernel](https://www.onkernel.com).
 
